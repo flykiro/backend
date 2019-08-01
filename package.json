@@ -1,0 +1,32 @@
+{
+  "name": "mini-program-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/joi": "^15.0.0",
+    "axios": "^0.18.0",
+    "dotenv": "^7.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-combine-routers": "^4.0.2",
+    "koa-jwt": "^3.5.1",
+    "koa-router": "^7.4.0",
+    "log4js": "^4.1.0",
+    "mongoose": "^5.4.23"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "nodemon": "^1.18.10"
+  },
+  "scripts": {
+    "build": "babel index.js -d dist",
+    "dev": "npm run build && nodemon dist/index.js",
+    "serve": "npm run build && node dist/index.js",
+    "start": "nodemon --exec babel-node ./src/index.js"
+  }
+}
